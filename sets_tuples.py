@@ -91,33 +91,33 @@
 # The text is converted to a tuple of characters and the target characters are 'v' and 'V'.
 # The result is output to the console.
 #queue the videos(2)
-text = """Voilà! In view, a humble vaudevillian veteran, cast vicariously as both victim and villain by the vicissitudes of Fate.
-This visage, no mere veneer of vanity, is a vestige of the vox populi, now vacant, vanished. However, this valorous visitation
-of a by-gone vexation stands vivified, and has vowed to vanquish these venal and virulent vermin vanguarding vice and
-vouchsafing the violently vicious and voracious violation of volition.
+# text = """Voilà! In view, a humble vaudevillian veteran, cast vicariously as both victim and villain by the vicissitudes of Fate.
+#This visage, no mere veneer of vanity, is a vestige of the vox populi, now vacant, vanished. However, this valorous visitation
+#of a by-gone vexation stands vivified, and has vowed to vanquish these venal and virulent vermin vanguarding vice and
+#vouchsafing the violently vicious and voracious violation of volition.
 
 
-The only verdict is vengeance; a vendetta, held as a votive, not in vain, for the value and veracity of such shall one day
-vindicate the vigilant and the virtuous.
+#The only verdict is vengeance; a vendetta, held as a votive, not in vain, for the value and veracity of such shall one day
+#vindicate the vigilant and the virtuous.
 
 
-Verily, this vichyssoise of verbiage veers most verbose, so let me simply add that it is my very good honor to meet you
-and you may call me V."""
+#Verily, this vichyssoise of verbiage veers most verbose, so let me simply add that it is my very good honor to meet you
+#and you may call me V."""
 
 
 # Convert the text to a tuple of characters
-text_tuple = tuple(text)
-print(text_tuple)
+#text_tuple = tuple(text)
+#print(text_tuple)
 
 # Tuple to store the target characters
-small_v = text_tuple.count('V')
-capital_V = text_tuple.count('v')
+#small_v = text_tuple.count('V')
+#capital_V = text_tuple.count('v')
 
 # Count occurrences of 'v' or 'V' by filtering the text_tuple
-total = small_v + capital_V
+#total = small_v + capital_V
 
 # Output the result
-print(total)
+#print(total)
 
 
 
@@ -130,29 +130,42 @@ sample_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 # get length of the list
 print(len(sample_list)) # Output: 3
 #this is called a nested list
-# Extract and print the second element from the first list
 
+# Extract and print the second element from the first list
+print(sample_list[0][1])
+print(sample_list[1][2])
+print(sample_list[2][0])
+print(sample_list[2][1])
 
 sample_list_of_fruit = {"fruits": ["apple", "banana", "cherry"]}
 # Extract and print the second fruit from the list
-
+print(sample_list_of_fruit["fruits"][1])
+print(sample_list_of_fruit["fruits"][2])
+print(sample_list_of_fruit["fruits"][0])
 
 sample_list_of_lists = {"lists": [[1, 2, 3], [4, 5, 6], [7, 8, 9]]}
 # Extract and print the third element from the second list
+print(sample_list_of_lists["lists"][1][2])
+#Get 8
+print(sample_list_of_lists["lists"][2][1])
+#Get 3
+print(sample_list_of_lists["lists"][0][2])
+#Get 7
+print(sample_list_of_lists["lists"][2][0])
 
-
-
-
-sample_list_of_dicts = {"dicts": [{"name": "Alice", "age": 25}, {"name": "Bob", "age": 30}, {"name": "Charlie", "age": 35}]}
+sample_list_of_dicts = {"dicts": [{"name": "Alice", "age": 25}, 
+                                  {"name": "Bob", "age": 30}, 
+                                  {"name": "Charlie", "age": 35}]}
 # Extract and print the age of the second person
+print(sample_list_of_dicts["dicts"][1]['age'])
 
-
-
-
+# Now get the name of the third person
+print(sample_list_of_dicts["dicts"][2]['name'])
 
 
 data = {
-    "fruits": {"tropical": ["mango", "pineapple", "banana"], "berries": ["strawberry", "blueberry", "raspberry"]},
+    "fruits": {"tropical": ["mango", "pineapple", "banana"], 
+               "berries": ["strawberry", "blueberry", "raspberry"]},
     "prices": {"mango": 1.5, "pineapple": 2.5, "banana": 0.5}
 }
 
@@ -160,20 +173,31 @@ data = {
 # Extract and print the second item from the 'tropical' list
 print(data["fruits"]["tropical"][1])  # Output: 'pineapple'
 
+#Get raspberry
+print(data["fruits"]["berries"][2])
 
+#Get mango price
+print(data["prices"]["mango"])
 
+#Get banana price
+print(data["prices"]["banana"])
 
 # Define the dictionary
 info = {
-    "team": {"coach": {"name": "John Doe", "age": 45}, "players": ["Alice", "Bob", "Charlie"]},
+    "team": {"coach": {"name": "John Doe", "age": 45}, 
+             "players": ["Alice", "Bob", "Charlie"]},
     "location": "New York"
 }
 
-
 # Extract and print the coach's name
 print(info["team"]["coach"]["name"])  # Output: 'John Doe'
+# get age of coach
 
 
+# get the third player
+
+
+# get the location
 
 
 # Define the dictionary
@@ -193,6 +217,12 @@ company = {
 
 # Extract and print the second employee from the 'Engineering' department
 print(company["departments"]["Engineering"]["employees"][1])  # Output: 'Noah'
+
+#get the second budget
+print(company["departments"]['Engineering']['budget'])
+      
+#get the overall budget
+
 
 
 # Define the dictionary
